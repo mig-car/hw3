@@ -1,0 +1,23 @@
+<h1> Create a new post for <%= @place["name"] %> </h1>
+
+<%= form_with :model => @post do |form| %>
+  <p>
+    <%= form.label "title", "Title of Post" %>
+    <%= form.text_field "title" %>
+  </p>
+  <p>
+    <%= form.label "description", "Description" %>
+    <%= form.text_field "description" %>
+  </p>
+  <p>
+    <%= form.label "posted_on", "Posted On" %>
+    <%= form.date_field "posted_on" %>
+  </p>
+
+  <%= form.submit %>
+
+    <p>
+        <a href="/places/<%= @place["id"] %>"> Back to <%= @place["name"] %> </a>
+    </p>
+
+<% end %>
