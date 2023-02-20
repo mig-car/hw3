@@ -1,3 +1,6 @@
+
+<!-- This form to create new posts will break when navigated to without passing a /place/id page. -->
+
 <h1> Create a new post for <%= @place["name"] %> </h1>
 
 <%= form_with :model => @post do |form| %>
@@ -16,8 +19,10 @@
 
   <%= form.submit %>
 
+<% end %>
+
     <p>
-        <a href="/places/<%= @place["id"] %>"> Back to <%= @place["name"] %> </a>
+        <a href="/places/<%= @place["id"] %>"> Back to all posts for <%= @place["name"] %> </a>
     </p>
 
-<% end %>
+
