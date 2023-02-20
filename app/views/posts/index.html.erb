@@ -1,0 +1,12 @@
+<h1> All posts: </h1>
+
+
+<ul>
+    <% for post in @posts%>
+        <p>
+            <li>
+                <a href="/posts/<%= post["id"] %>"> <%= post["title"]%>
+            </li> 
+        </p>
+    <% end %>
+</ul>

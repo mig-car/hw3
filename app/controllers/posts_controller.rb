@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
 
     def index
-        
+        redirect_to "/places"
     end
 
     def show
-        @post = Post.find_by({ "id" => params["id"] })
+        redirect_to "/places"
     end 
 
     def new
